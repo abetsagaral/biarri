@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <h2 class="skin-wt w-seven">
+        Home
+      </h2>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+<ion-content padding>
+  <ion-row>
+    <ion-col>
+      <h2>Welcome to ShareSource BPO</h2>
+      <ion-card>
+
+        <!-- <img src="http://www.sharesource.com.au/wp-content/uploads/2016/02/sharesource-logo.jpg"> -->
+        <ion-fab right top>
+          <button ion-fab>
+            <ion-icon name="pin"></ion-icon>
+          </button>
+        </ion-fab>
+
+        <ion-item>
+          <ion-icon name="football" item-left large></ion-icon>
+          <h2>CONTACT US</h2>
+          <p>Level 1, 191 George Street Brisbane, QLD 4000, Australia</p>
+        </ion-item>
+
+        <ion-item>
+          <h2>
+            Appendix
+          </h2>
+        </ion-item>
+        <ion-item *ngFor="let post of data">
+          <h2>
+            {{ post.status }} 
+          </h2>
+          <h3>
+            Status Informations:
+            <small>{{ post.statusInfo }}</small>
+          </h3>
+          <h3>
+            Usage: 
+            <small>
+              {{ post.usage }}
+            </small>
+          </h3>
+
+          <h3>
+            Total Transactions:
+            <small>
+              {{ post.totalTransactions }}
+            </small>
+          </h3>
+
+          <h3>
+            Language:
+            <small> {{ post.language }} </small>
+          </h3>
+
+          <h3>
+            Text
+            <small>
+              {{ post.text }}
+            </small>
+          </h3>
+        </ion-item>
+        
+
+        <ion-item>
+          <span item-left>Appendix A</span>
+          <span item-right>Appendix B</span>
+          <!-- <button primary clear item-right>
+            <ion-icon name="navigate"></ion-icon>
+            Start
+          </button> -->
+        </ion-item>
+      </ion-card>
+    </ion-col>
+    <!-- <ion-col>
+    </ion-col> -->
+  </ion-row>
+</ion-content>
